@@ -34,6 +34,11 @@ section {
   padding-top: 120px;
   padding-bottom: 120px;
 }
+
+button {
+  font-family: inherit;
+}
+
 .container {
   max-width: 1158px;
   padding-left: 15px;
@@ -474,4 +479,225 @@ section {
 .socials-link:hover,
 .socials-link:focus {
   background-color: #31d0aa;
+}
+
+/* --------------FORM---------------- */
+.input {
+  padding: none;
+}
+
+.modal-overlay {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(46, 47, 66, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+
+  /* opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  max-width: 408px;
+  max-height: 584px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  background: #fcfcfc;
+  border-radius: 4px;
+  padding: 24px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.close-button {
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 24px;
+  height: 24px;
+  box-shadow: none;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-icon-close {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-button:hover {
+  background-color: #404bbf;
+  border: none;
+}
+
+.close-button:hover .form-icon-close,
+.close-button:focus .form-icon-close {
+  fill: #ffffff;
+}
+
+.form-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+  margin-bottom: 16px;
+}
+
+.modal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+
+.form-field-wrap {
+  position: relative;
+}
+
+.form-name,
+.form-tel,
+.form-email {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 360px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  height: 40px;
+  padding-left: 38px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  caret-color: #2e2f42;
+}
+
+.form-name:focus,
+.form-tel:focus,
+.form-email:focus,
+.form-comment:focus {
+  border: 1px solid #4d5ae5;
+  outline: none;
+}
+
+.form-name:focus + .icon-name,
+.form-tel:focus + .icon-phone,
+.form-email:focus + .icon-email {
+  fill: #404bbf;
+}
+
+.form-icon {
+  position: absolute;
+  top: 25%;
+  left: 16px;
+  /* transform: translate(-50%); */
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-comment {
+  display: block;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 360px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  margin-bottom: 8px;
+  height: 120px;
+  padding-left: 16px;
+  caret-color: #2e2f42;
+}
+
+.check-field {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  margin-bottom: 16px;
+}
+
+.input-check-label {
+  display: flex;
+  align-items: center;
+}
+
+.check-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  margin-right: 8px;
+}
+
+.input-check-icon {
+  fill: transparent;
+}
+
+.input-check:checked + .input-check-label > .check-empty {
+  background-color: #404bbf;
+  border: none;
+  fill: #ffffff;
+}
+
+.input-check-link {
+  line-height: 1.33;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #4d5ae5;
+  margin-left: 4px;
+}
+
+.send-button {
+  align-self: center;
+  border: none;
+  border-radius: 4px;
+  padding: 16px 32px;
+  width: 169px;
+  height: 56px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background: #4d5ae5;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
 }
