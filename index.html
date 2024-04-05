@@ -524,9 +524,9 @@
 
     <div class="modal-overlay">
       <div class="modal-form">
-        <button class="close-button">
+        <button type="button" class="close-button">
           <svg class="form-icon-close" width="8" height="8">
-            <use xlink:href="./images/icons.svg#icon-close-black-18dp"></use>
+            <use href="./images/icons.svg#icon-close-black-18dp"></use>
           </svg>
         </button>
         <p class="form-title">Leave your contacts and we will call you back</p>
@@ -535,8 +535,13 @@
           <div class="modal-field">
             <label for="user-name" class="form-label">Name</label>
             <div class="form-field-wrap">
-              <input class="form-name" id="user-name" type="text" name="name" />
-              <svg class="form-icon icon-name" width="18" height="24">
+              <input
+                class="form-input"
+                id="user-name"
+                type="text"
+                name="user-name"
+              />
+              <svg class="form-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-person-black"></use>
               </svg>
             </div>
@@ -547,8 +552,13 @@
           <div class="modal-field">
             <label for="user-phone" class="form-label">Phone</label>
             <div class="form-field-wrap">
-              <input type="tel" class="form-tel" id="user-phone" name="phone" />
-              <svg class="form-icon icon-phone" width="18" height="24">
+              <input
+                type="tel"
+                class="form-input"
+                id="user-phone"
+                name="user-phone"
+              />
+              <svg class="form-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-phone-black"></use>
               </svg>
             </div>
@@ -560,12 +570,12 @@
             <label for="user-email" class="form-label">Email</label>
             <div class="form-field-wrap">
               <input
-                class="form-email"
+                class="form-input"
                 type="email"
                 id="user-email"
-                name="e-mail"
+                name="user-e-mail"
               />
-              <svg class="form-icon icon-email" width="18" height="24">
+              <svg class="form-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-email-black"></use>
               </svg>
             </div>
@@ -577,7 +587,7 @@
             <label for="user-comment" class="form-label">Comment</label>
             <textarea
               id="user-comment"
-              name="comment"
+              name="user-comment"
               class="form-comment"
               placeholder="Text input"
             ></textarea>
