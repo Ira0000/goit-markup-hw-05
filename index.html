@@ -505,16 +505,15 @@
                 type="email"
                 class="subscribe-field"
                 name="email"
-                value="E-mail"
+                placeholder="E-mail"
             /></label>
-            <div class="subscribe-button-wrapper">
-              <button class="subscribe-button" type="submit">
-                Subscribe
-                <svg class="subscrobe-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-plane"></use>
-                </svg>
-              </button>
-            </div>
+
+            <button class="subscribe-button" type="submit">
+              Subscribe
+              <svg class="subscrobe-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-plane"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
@@ -525,18 +524,14 @@
 
     <div class="modal-overlay">
       <div class="modal-form">
+        <button class="close-button">
+          <svg class="form-icon-close" width="8" height="8">
+            <use xlink:href="./images/icons.svg#icon-close-black-18dp"></use>
+          </svg>
+        </button>
+        <p class="form-title">Leave your contacts and we will call you back</p>
         <form class="form" name="your_contacts" autocomplete="off">
-          <button class="close-button">
-            <svg class="form-icon-close" width="8" height="8">
-              <use xlink:href="./images/icons.svg#icon-close-black-18dp"></use>
-            </svg>
-          </button>
-          <p class="form-title">
-            Leave your contacts and we will call you back
-          </p>
-
           <!-- ---------------USER NAME FIELD---------------->
-
           <div class="modal-field">
             <label for="user-name" class="form-label">Name</label>
             <div class="form-field-wrap">
@@ -600,7 +595,7 @@
             />
             <label class="input-check-label" for="user-privacy">
               <span class="check-empty">
-                <svg class="input-check-icon" width="8" height="10">
+                <svg class="input-check-icon" width="10" height="8">
                   <use href="./images/icons.svg#icon-check"></use>
                 </svg>
               </span>
