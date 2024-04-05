@@ -444,7 +444,8 @@ button {
   color: #f4f4fd;
 }
 
-.socials-wrapper {
+.socials-second-wrapper {
+  margin-right: 80px;
 }
 .socials-title {
   max-width: 208px;
@@ -481,6 +482,73 @@ button {
   background-color: #31d0aa;
 }
 
+/*- ----------SUBSCRIBE FIELD------------------- */
+
+.subscribe-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 24px;
+}
+
+.subscribe-field {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #fff;
+  padding-left: 16px;
+
+  transition: border outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-field:focus {
+  border: 1px solid #4d5ae5;
+  outline: none;
+}
+
+.subscribe-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 165px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 4px;
+  border: none;
+  padding: 8px 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-button:hover,
+.subscribe-button:focus {
+  background-color: #404bbf;
+}
+
+.subscrobe-icon {
+  fill: #ffffff;
+}
+
 /* --------------FORM---------------- */
 .input {
   padding: none;
@@ -497,13 +565,17 @@ button {
   height: 100%;
   z-index: 999;
 
-  /* opacity: 0;
+  opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-overlay.is-open {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 
@@ -626,6 +698,9 @@ button {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* -------------------------------------------*/
+/* ----------------COMMENT FIELD IN FORM-------*/
+
 .form-comment {
   display: block;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -639,8 +714,23 @@ button {
   margin-bottom: 8px;
   height: 120px;
   padding-left: 16px;
+  padding-top: 8px;
   caret-color: #2e2f42;
+  resize: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+::placeholder {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+}
+/* -------------------------------------------*/
+
+/* --------CHECKBOX USER PRIVACY -----------*/
 
 .check-field {
   font-weight: 400;
@@ -667,10 +757,6 @@ button {
   margin-right: 8px;
 }
 
-.input-check-icon {
-  fill: transparent;
-}
-
 .input-check:checked + .input-check-label > .check-empty {
   background-color: #404bbf;
   border: none;
@@ -684,6 +770,7 @@ button {
   color: #4d5ae5;
   margin-left: 4px;
 }
+/* -------------------FORM BUTTON------------------*/
 
 .send-button {
   align-self: center;
@@ -699,5 +786,11 @@ button {
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
+  cursor: pointer;
   color: #fff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.send-button:hover,
+.send-button:focus {
+  background-color: #404bbf;
 }
